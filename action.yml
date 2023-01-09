@@ -1,0 +1,11 @@
+name: 'Datadog Lambda Deployer Action'
+description: 'deploy a lambda function to launch performance test'
+inputs:
+  runtimeId:
+    description: 'runtime'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.runtimeId }}
