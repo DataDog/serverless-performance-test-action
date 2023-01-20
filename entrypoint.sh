@@ -1,7 +1,9 @@
 #!/bin/sh
 RUNTIME_ID=$1 #will be used later, nodsjs for now
 LAYER_NAME=$2
-
+cd /
+pwd
+ls -la 
 /build_tools \
     deploy \
     --layer-path "/layer.zip" \
