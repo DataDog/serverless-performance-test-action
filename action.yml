@@ -7,9 +7,13 @@ inputs:
   layer_path:
     description: 'path to the zip file to be uploaded as a layer'
     required: true
+  layer_name:
+    description: 'layer name'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.runtime_id }}
     - ${{ inputs.layer_path }}
+    - ${{ inputs.layer_name }}
