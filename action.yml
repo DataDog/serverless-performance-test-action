@@ -1,15 +1,15 @@
 name: 'Datadog Lambda Deployer Action'
 description: 'deploy a lambda function to launch performance test'
 inputs:
-  runtimeId:
+  runtime_id:
     description: 'runtime'
     required: true
-  layerPath:
+  layer_path:
     description: 'path to the zip file to be uploaded as a layer'
     required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.runtimeId }}
-    - ${{ inputs.layerPath }}
+    - ${{ inputs.runtime_id }}
+    - ${{ inputs.layer_path }}
