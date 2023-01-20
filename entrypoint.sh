@@ -4,7 +4,7 @@ LAYER_NAME=$2
 
 /build_tools \
     deploy \
-    --layer-path "layer.zip" \
+    --layer-path "/layer.zip" \
     --architecture amd64 \
     --layer-name "${LAYER_NAME}" \
     --region "${AWS_REGION}"
