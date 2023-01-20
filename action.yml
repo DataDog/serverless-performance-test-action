@@ -4,8 +4,12 @@ inputs:
   runtimeId:
     description: 'runtime'
     required: true
+  layerPath:
+    description: 'path to the zip file to be uploaded as a layer'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.runtimeId }}
+    - ${{ inputs.layerPath }}
