@@ -7,6 +7,6 @@ RUN update-ca-certificates
 
 COPY entrypoint.sh /entrypoint.sh
 COPY build_tools /build_tools
-ADD $INPUT_LAYER_PATH /
+ADD $INPUT_LAYER_PATH /layer.zip
 
 ENTRYPOINT ["/entrypoint.sh"]
