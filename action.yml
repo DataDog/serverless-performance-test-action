@@ -16,9 +16,6 @@ inputs:
   role:
     description: 'IAM role to use'
     required: false
-  extension_arn:
-    description: 'Arn of the Datadog extension'
-    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
