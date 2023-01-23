@@ -4,13 +4,12 @@ LAYER_NAME=$2
 RUN_TEST=$4
 ROLE=$5
 
-ls -lah
 pwd
-ls -lah /
+ls 
 
 /build_tools \
     deploy \
-    --layer-path "/layer.zip" \
+    --layer-path "layer.zip" \
     --architecture amd64 \
     --layer-name "${LAYER_NAME}" \
     --region "${AWS_REGION}"
