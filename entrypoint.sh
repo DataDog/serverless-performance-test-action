@@ -4,12 +4,10 @@ LAYER_NAME=$2
 RUN_TEST=$4
 ROLE=$5
 
-pwd
-ls -lah
-cd /
-pwd
-ls -lah
+
 mv *.zip layer.zip
+ls -lah
+pwd
 
 /build_tools \
     deploy \
