@@ -2,8 +2,10 @@
 RUNTIME_ID=$1 #will be used later, nodsjs for now
 LAYER_NAME=$2
 
-pwd 
-ls -la 
+cd /
+ls -la
+mv /*.zip /layer.zip
+ls -la
 
 /build_tools \
     deploy \
