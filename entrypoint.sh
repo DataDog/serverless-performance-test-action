@@ -2,14 +2,11 @@
 RUNTIME_ID=$1 #will be used later, nodsjs for now
 LAYER_NAME=$2
 
-cd /
-ls -la
-mv /*.zip /layer.zip
-ls -la
+mv *.zip layer.zip
 
 /build_tools \
     deploy \
-    --layer-path "/layer.zip" \
+    --layer-path "/github/workspace/layer.zip" \
     --architecture amd64 \
     --layer-name "${LAYER_NAME}" \
     --region "${AWS_REGION}"
