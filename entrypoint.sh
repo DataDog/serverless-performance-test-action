@@ -5,7 +5,7 @@ RUN_TEST=$4
 ROLE=$5
 
 pwd
-cp layer.zip /layer.zip
+cp *.zip /layer.zip
 cd /
 
 /build_tools \
