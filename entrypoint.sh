@@ -5,11 +5,12 @@ RUN_TEST=$4
 ROLE=$5
 
 pwd
-ls 
+cp layer.zip /layer.zip
+cd /
 
 /build_tools \
     deploy \
-    --layer-path "/github/workspace/layer.zip" \
+    --layer-path "layer.zip" \
     --architecture amd64 \
     --layer-name "${LAYER_NAME}" \
     --region "${AWS_REGION}"
