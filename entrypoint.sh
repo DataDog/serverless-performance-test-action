@@ -4,6 +4,7 @@ LAYER_NAME=$2
 RUN_TEST=$4
 ROLE=$5
 
+cd /
 mv *.zip layer.zip
 
 /build_tools \
