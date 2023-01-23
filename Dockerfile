@@ -1,14 +1,11 @@
 FROM ubuntu:jammy
-ARG INPUT_LAYER_PATH
 
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends ca-certificates
 RUN update-ca-certificates
 
-RUN mkdir /app
-WORKDIR /app
-COPY entrypoint.sh /app
-COPY build_tools /app/
-COPY $INPUT_LAYER_PATH /app
+COPY entrypoint.sh /entrypoint.sh
+COPY build_tools /build_tools
+COPY layer.zip /layer.zip
 
-ENTRYPOINT ["/app/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
