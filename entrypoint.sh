@@ -3,7 +3,6 @@ RUNTIME_ID=$1 #will be used later, nodsjs for now
 LAYER_NAME=$2
 RUN_TEST=$4
 ROLE=$5
-EXTENSION_ARN=$6
 
 mv *.zip layer.zip
 
@@ -21,8 +20,7 @@ then
         --layer-name "${LAYER_NAME}" \
         --runtime "${RUNTIME_ID}" \
         --region "${AWS_REGION}" \
-        --role "${ROLE}" \
-        --extension-arn "${EXTENSION_ARN}"
+        --role "${ROLE}"
 else
     echo "run_test param is not set to 'true', skipping"
 fi

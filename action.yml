@@ -28,4 +28,3 @@ runs:
     - ${{ inputs.layer_path }}
     - ${{ inputs.run_test }}
     - ${{ inputs.role }}
-    - ${{ inputs.extension_arn }}
