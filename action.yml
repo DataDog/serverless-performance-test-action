@@ -10,6 +10,9 @@ inputs:
   layer_name:
     description: 'layer name'
     required: true
+  run_test:
+    description: 'tells whether or not we should deploy a function and run a test'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -17,3 +20,4 @@ runs:
     - ${{ inputs.runtime_id }}
     - ${{ inputs.layer_name }}
     - ${{ inputs.layer_path }}
+    - ${{ inputs.run_test }}
