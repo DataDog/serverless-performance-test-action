@@ -7,8 +7,8 @@ RUN update-ca-certificates
 
 RUN mkdir /app
 WORKDIR /app
-COPY entrypoint.sh /
+COPY entrypoint.sh /app
 COPY build_tools /app/
-COPY $INPUT_LAYER_PATH /
+COPY $INPUT_LAYER_PATH /app
 
 ENTRYPOINT ["/app/entrypoint.sh"]
