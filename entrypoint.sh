@@ -4,21 +4,20 @@ LAYER_NAME=$2
 RUN_TEST=$4
 ROLE=$5
 
-
 mv *.zip layer.zip
 ls -lah
 pwd
 
-/build_tools \
+build_tools \
     deploy \
-    --layer-path "/github/workspace/layer.zip" \
+    --layer-path "layer.zip" \
     --architecture amd64 \
     --layer-name "${LAYER_NAME}" \
     --region "${AWS_REGION}"
 
 if [ "$RUN_TEST" = "true" ]
 then
-    /build_tools \
+    build_tools \
         deploy_lambda \
         --layer-name "${LAYER_NAME}" \
         --runtime "${RUNTIME_ID}" \

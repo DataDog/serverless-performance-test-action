@@ -5,10 +5,10 @@ RUN apt-get update
 RUN apt-get install -y --no-install-recommends ca-certificates
 RUN update-ca-certificates
 
-COPY entrypoint.sh /entrypoint.sh
-COPY build_tools /build_tools
-COPY $INPUT_LAYER_PATH /
+RUN mkdir /app
+WORKDIR /app
+COPY entrypoint.sh .
+COPY build_tools .
+COPY $INPUT_LAYER_PATH .
 
-WORKDIR /
-
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
