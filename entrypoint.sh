@@ -13,7 +13,8 @@ mv *.zip layer.zip
     --layer-name "${LAYER_NAME}" \
     --region "${AWS_REGION}"
 
-if [ "${RUN_TEST}" == "true" ]
+echo $RUN_TEST
+if [ "$RUN_TEST" == "true" ]
 then
     /build_tools \
         deploy_lambda \
