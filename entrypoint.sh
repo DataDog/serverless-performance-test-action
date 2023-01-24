@@ -1,6 +1,7 @@
 #!/bin/sh
 RUNTIME_ID=$1 #will be used later, nodsjs for now
 LAYER_NAME=$2
+LAYER_PATH=$3
 ROLE=$4
 PR_ID=$5
 
@@ -9,7 +10,7 @@ then
       PR_ID="main"
 fi
 
-cp *.zip /layer.zip
+cp $LAYER_PATH /layer.zip
 cd /
 
 /build_tools \
