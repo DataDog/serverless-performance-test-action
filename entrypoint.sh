@@ -5,6 +5,7 @@ ROLE=$4
 PR_ID=$5
 
 cp *.zip /layer.zip
+cd /
 
 /build_tools \
     deploy \
