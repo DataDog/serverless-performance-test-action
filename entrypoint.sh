@@ -1,8 +1,10 @@
 #!/bin/sh
 RUNTIME_ID=$1 #will be used later, nodsjs for now
 LAYER_NAME=$2
-ROLE=$5
-PR_ID=$6
+ROLE=$4
+PR_ID=$5
+
+cp *.zip /layer.zip
 
 /build_tools \
     deploy \
