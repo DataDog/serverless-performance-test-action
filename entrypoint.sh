@@ -1,8 +1,8 @@
 #!/bin/sh
 RUNTIME_ID=$1 #will be used later, nodsjs for now
 LAYER_NAME=$2
-RUN_TEST=$4
 ROLE=$5
+PR_ID=$6
 
 pwd
 cp *.zip /layer.zip
@@ -23,6 +23,8 @@ then
         --runtime "${RUNTIME_ID}" \
         --region "${AWS_REGION}" \
         --role "${ROLE}"
+        --pr-id "${PR_ID}"
+        --should-invoke
 else
     echo "run_test param is not set to 'true', skipping"
 fi
