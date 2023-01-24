@@ -24,6 +24,6 @@ cd /
     --layer-name "${LAYER_NAME}" \
     --runtime "${RUNTIME_ID}" \
     --region "${AWS_REGION}" \
-    --role "${ROLE}"
-    --pr-id "${PR_ID}"
+    --role "${ROLE}" \
+    --pr-id "${PR_ID}" \
     --should-invoke
