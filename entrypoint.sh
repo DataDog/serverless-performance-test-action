@@ -2,7 +2,12 @@
 RUNTIME_ID=$1 #will be used later, nodsjs for now
 LAYER_NAME=$2
 ROLE=$4
-PR_ID="${$5:-main}"
+PR_ID=$5
+
+if test -z "$PR_ID" 
+then
+      PR_ID="main"
+fi
 
 cp *.zip /layer.zip
 cd /
