@@ -24,4 +24,4 @@ runs:
     - ${{ inputs.layer_name }}
     - ${{ inputs.layer_path }}
     - ${{ inputs.role }}
-    - ${{ inputs.pr }}
+    - ${{ inputs.pr_number }}
